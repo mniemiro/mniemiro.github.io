@@ -1,9 +1,23 @@
+import DropdownSection from '../components/DropdownSection';
 
 const Index = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-4">Welcome</h1>
-      <p className="text-lg">Welcome to M.A. Niemiro's portfolio.</p>
+    <div className="space-y-4">
+      <h1 className="text-[19px] mb-1 font-bold">Welcome</h1>
+      <p className="text-[12px] mb-6">
+        A collection of mathematical thoughts and observations.
+      </p>
+
+      <DropdownSection 
+        title="Recent Notes" 
+        content={
+          <div className="space-y-2 text-[8px]">
+            <p>Category Theory</p>
+            <p>Set Theory</p>
+            <p>Algebraic Geometry</p>
+          </div>
+        }
+      />
     </div>
   );
 };

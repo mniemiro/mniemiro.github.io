@@ -1,44 +1,42 @@
-
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const Navigation = () => {
-  const location = useLocation();
-
-  const isActive = (path: string) => location.pathname === path;
-
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center px-4 sm:px-8">
+    <header className="w-full border-b-[1px] bg-background font-['Anonymous_Pro']">
+      <div className="container max-w-3xl h-24 pt-12 pb-2 flex items-start justify-between px-4">
         <Link 
           to="/" 
-          className="text-xl font-semibold tracking-tight hover:text-primary transition-colors duration-200"
+          className="text-3xl font-['Anonymous_Pro'] font-thin text-foreground hover:text-orange-500 transition-colors"
         >
           M.A. Niemiro
         </Link>
-        <nav className="ml-auto flex gap-1">
+        <nav className="flex items-start gap-2 font-['Roboto_Mono'] text-base pt-2">
           <Link
             to="/about"
-            className={`nav-link ${isActive('/about') ? 'active' : ''}`}
+            className="text-orange-500 hover:text-orange-600 hover:underline transition-colors"
           >
             About
           </Link>
+          <span className="text-foreground">/</span>
           <Link
-            to="/work"
-            className={`nav-link ${isActive('/work') ? 'active' : ''}`}
+            to="/infinity"
+            className="text-orange-500 hover:text-orange-600 hover:underline transition-colors"
           >
-            Work
+            ∞
           </Link>
+          <span className="text-foreground">/</span>
           <Link
-            to="/projects"
-            className={`nav-link ${isActive('/projects') ? 'active' : ''}`}
+            to="/notes"
+            className="text-orange-500 hover:text-orange-600 hover:underline transition-colors"
           >
-            Projects
+            Notes
           </Link>
+          <span className="text-foreground">/</span>
           <Link
-            to="/contact"
-            className={`nav-link ${isActive('/contact') ? 'active' : ''}`}
+            to="/miscellany"
+            className="text-orange-500 hover:text-orange-600 hover:underline transition-colors"
           >
-            Contact
+            Miscellany
           </Link>
         </nav>
       </div>

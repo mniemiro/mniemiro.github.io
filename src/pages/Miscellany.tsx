@@ -1,11 +1,14 @@
 import DropdownSection from '../components/DropdownSection';
 
-const About = () => {
+const Miscellany = () => {
   return (
     <div className="space-y-4">
-      <h1 className="text-[19px] mb-1 font-bold">About</h1>
+      <h1 className="text-[19px] mb-1 font-bold">Miscellany</h1>
       <p className="text-[12px] mb-6">
-        A collection of thoughts on mathematics.
+        A collection of mathematical notes and observations.
+      </p>
+      <p className="text-[12px] mb-6">
+        <a href="https://mathscinet.ams.org/" className="text-orange-500 hover:text-orange-600">MathSciNet Profile</a>
       </p>
 
       <DropdownSection 
@@ -22,4 +25,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Miscellany; 
